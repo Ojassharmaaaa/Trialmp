@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/schemes.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>  
+    <link rel="icon" href="https://i.pinimg.com/736x/3f/95/b6/3f95b6f96e20f2a5ef1d435f38e17c63.jpg" type="image/x-icon">
+   
+    <title>FAQs</title>
+    <style>
+        body {
+    font-family: 'Roboto', sans-serif; /* Use a web font */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Slightly lighter background color */
+    color: #333;
+}
+
+.container {
+    max-width: 85%; /* Slightly reduced width */
+    margin: 30px auto;
+    padding: 30px; /* Increased padding for more space */
+    background-color: #ffffff;
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3; /* Darker shade of blue */
+    font-size: 36px; /* Larger font size */
+    margin-bottom: 30px;
+}
+
+.contact-info, .social-media, .faq-item {
+    margin-bottom: 40px; /* Increased spacing */
+}
+
+.contact-info h2, .social-media h2, .faq-item .question {
+    font-size: 26px; /* Slightly larger font size */
+    color: #0056b3; /* Consistent color */
+    margin-bottom: 15px;
+}
+
+.contact-info p, .social-media p, .faq-item .answer {
+    font-size: 18px;
+    line-height: 1.8; /* Slightly increased line height */
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 32px; /* Slightly larger icons */
+    color: #0056b3;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-media a:hover {
+    color: #003d7a;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.faq-item {
+    border: 1px solid #0056b3; /* Blue border for items */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for FAQ items */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.faq-item:hover {
+    background-color: #e0f7fa; /* Light blue background on hover */
+    color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.faq-item:last-of-type {
+    border-bottom: none;
+}
+
+.question {
+    font-size: 20px; /* Slightly larger font size */
+    font-weight: bold;
+    color: #003d7a; /* Darker color for better contrast */
+    cursor: pointer;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.question:hover {
+    color: #002d5b;
+    text-decoration: underline; /* Underline on hover */
+}
+
+.answer {
+    display: none;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 15px; /* Increased padding for answers */
+}
+
+.answer.active {
+    display: block;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="content">
+          <!-- Navbar -->
+          <nav class="nav" style="margin-bottom: 5%; margin-left: 5%;">
+              <div class="nav-container">
+                  <!-- Logo -->
+                  <a href="index.html" style="height: 20px; width: 160px; margin-bottom: 60px;" class="nav-logo">
+                      <img src="logo.png" alt="logo" />
+                  </a>
+                  
+                  <!-- Navigation Links -->
+                  <ul class="nav-links">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="categories.html">Categories</a></li>
+                      <li><a href="Analyticspage.html">Dashboard</a></li>
+                      <li><a href="dyk.html">Resources</a></li>
+                      <li><a href="demotest.html">Demo Test</a></li>
+                      <li><a href="help.html">FAQs</a></li>
+                      <li><a href="about.html">About Us</a></li>
+                      
+                  </ul>
+                  
+                  <!-- Register and Login Buttons -->
+                  <div class="nav-buttons">
+                      <button onclick="window.location.href='registration.html'" class="button">Sign In</button>
+                      <button onclick="window.location.href='login_page.html'" style="margin-left: 20px;" class="button">Login</button>
+                  </div>
+              </div>
+          </nav>
+
+
+
+    <!-- FAQ Section -->
+    <h1>Frequently Asked Questions (FAQs)</h1>
+
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(1)">1)What is the minimum age to apply for a driving license in India?</div>
+        <div class="answer" id="answer1">The minimum age to apply for a learner's license in India is 16 years for a two-wheeler without gear and 18 years for a motor vehicle with gear.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(2)">2) What documents are required to apply for a driving license?</div>
+        <div class="answer" id="answer2">You will need proof of identity (like Aadhaar card, Voter ID), proof of address (like utility bills, rent agreement), proof of age (like birth certificate, passport), passport-size photographs, and the learner's license for a permanent license application.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(3)">3) How can I apply for a driving license online?</div>
+        <div class="answer" id="answer3">You can apply for a driving license online through the Parivahan Sewa website by filling out the required forms, uploading necessary documents, paying the application fee, and booking a test slot.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(4)">4) What are the different types of driving licenses available?</div>
+        <div class="answer" id="answer4">The main types of driving licenses include learner's license, permanent driving license, commercial driving license, and international driving permit.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(5)">5) What is the process for renewing a driving license?</div>
+        <div class="answer" id="answer5">To renew your driving license, visit the Parivahan Sewa website, fill out the renewal application form, upload required documents, pay the renewal fee, and book an appointment at your nearest RTO if needed.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(6)">6) How can I prepare for the driving test?</div>
+        <div class="answer" id="answer6">Study the driver's manual, take practice tests online, understand traffic signs and road rules, and practice driving regularly, focusing on essential maneuvers like parallel parking, lane changing, and turning.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(7)">7) What are the common traffic violations and their fines?</div>
+        <div class="answer" id="answer7">Common violations include driving without a license (₹5,000 fine), overspeeding (₹1,000 to ₹2,000 fine), driving under the influence (₹10,000 fine and/or imprisonment), and not wearing a helmet (₹1,000 fine)</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(8)">8) What should I do if I lose my driving license?</div>
+        <div class="answer" id="answer8">If you lose your driving license, you should file a report at the nearest police station, get a copy of the FIR, and then apply for a duplicate license online through the Parivahan Sewa website.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(9)">9) What are some important road safety measures?</div>
+        <div class="answer" id="answer9">Always wear a seatbelt, follow speed limits, avoid using mobile phones while driving, never drive under the influence of alcohol or drugs, use indicators when turning, and maintain a safe distance from other vehicles.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(10)">10) How can I check the status of my driving license application?</div>
+        <div class="answer" id="answer10">You can check the status of your driving license application by visiting the Parivahan Sewa website, entering your application number, and following the prompts to view the current status.
+    </div>
+
+
+</div>
+
+<footer style="background-color: #f4f4f400;">
+    <div class="footer-top" >
+        <div class="footer-content pt-95 pb-95 md-pt-75 md-pb-27">
+            <div class="container1">
+                <div class="row">
+                    <!-- Ayush Startup Portal Section -->
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="resources-widget widget portal">
+                          <div class="tf-logo-s">
+                            <a href="">
+                                <img src="logo.png" alt="" height="60px" width= auto class="logo-image">
+                            </a>
+                        </div>
+                        <div class="visitorDv">
+                            <div class="col-md-12 ft-left text-right">
+                                <div class="Update">
+                                    <p>Last Updated on: 31<sup>st</sup> Aug 2024</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ft-left text-right">
+                                <!-- <div class="Update">
+                                    <p>Visitors: 1221</p>
+                                </div> -->
+                            </div>
+                        </div>                        
+                        </div>
+                    </div>
+
+                    <!-- Links Section -->
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+                        <div class="resources-widget widget links">
+                            <ul class="ft-links">
+                                <li><a href='' title="Website Policies">Website Policies</a></li>
+                                <li><a href='' title="Disclaimer">Disclaimer</a></li>
+                            </ul>
+                            <ul class="ft-links">
+                                <li><a href='' title="Help">Help</a></li>
+                                <li><a href='' title="Terms and Conditions">Terms and Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Section -->
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="resources-widget widget">
+                            <div class="widget-title-wrap mb-21">
+                                <h3 class="widget-title mb-19">Connect with us</h3>
+                            </div>
+                            <ul class="socialgroup-links">
+                                <li class="facebookbg">
+                                    <a target="_blank" href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="twitterbg">
+                                    <a target="_blank" href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="youtubebg">
+                                    <a target="_blank" href="" title="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="instagrambg">
+                                    <a target="_blank" href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom" style="width: 100%;">
+        <div class="container1">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="ftb">
+                        <div class="row">
+                            <div class="col-md-12 ft-right">
+                                <div class="copyright-sec text-center">
+                                    <p>Copyright @ 2024 License Lane. | India, All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<script>
+    function toggleAnswer(id) {
+        var answer = document.getElementById('answer' + id);
+        if (answer.classList.contains('active')) {
+            answer.classList.remove('active');
+        } else {
+            // Hide all answers
+            var answers = document.querySelectorAll('.answer');
+            answers.forEach(function(ans) {
+                ans.classList.remove('active');
+            });
+            // Show the selected answer
+            answer.classList.add('active');
+        }
+    }
+</script>
+</body>
+</html>

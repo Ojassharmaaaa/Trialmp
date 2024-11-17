@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>  
+    <link rel="icon" href="https://i.pinimg.com/736x/3f/95/b6/3f95b6f96e20f2a5ef1d435f38e17c63.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/schemes.css">
+    <title>Analytics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container1  {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff00;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff00;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        #analytics {
+            margin-top: 30px;
+        }
+        footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+        footer p {
+            margin: 0;
+        }
+        .chart-container {
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <div class="content">
+          <!-- Navbar -->
+          <nav class="nav" style="margin-bottom: 5%;">
+              <div class="nav-container">
+                  <!-- Logo -->
+                  <a href="index.html" style="height: 20px; width: 160px; margin-bottom: 60px;" class="nav-logo">
+                      <img src="logo.png" alt="logo" />
+                  </a>
+                  
+                  <!-- Navigation Links -->
+                  <ul class="nav-links">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="categories.html">Categories</a></li>
+                      <li><a href="Analyticspage.html">Dashboard</a></li>
+                      <li><a href="dyk.html">Resources</a></li>
+                      <li><a href="demotest.html">Demo Test</a></li>
+                      <li><a href="help.html">FAQs</a></li>
+                      <li><a href="about.html">About Us</a></li>
+                      
+                  </ul>
+                  
+                  <!-- Register and Login Buttons -->
+                  <div class="nav-buttons">
+                      <button onclick="window.location.href='registration.html'" class="button">Sign In</button>
+                      <button onclick="window.location.href='login_page.html'" style="margin-left: 20px;" class="button">Login</button>
+                  </div>
+              </div>
+          </nav>
+        </div>
+        </div>
+
+        <div class="container">
+            <h1>Analytics</h1>
+        
+            <!-- Registration by Domain Chart -->
+            <div class="chart-container">
+                <h2>Registrations by Age</h2>
+                <canvas id="registrationChart"></canvas>
+            </div>
+        
+            <!-- Registration by Year Chart -->
+            <div class="chart-container">
+                <h2>Registrations by Year</h2>
+                <canvas id="yearChart"></canvas>
+            </div>
+        
+            <div class="chart-container">
+                <h2>Regional Distribution</h2>
+                <canvas id="regionalChart"></canvas>
+            </div>
+        
+            <div class="chart-container">
+                <canvas id="genderChart"></canvas>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            // Registration by Domain Chart
+            var ctxDomain = document.getElementById('registrationChart').getContext('2d');
+var registrationChart = new Chart(ctxDomain, {
+    type: 'bar',
+    data: {
+        labels: ['18-25', '26-35', '36-45', '46-55', '55+'],
+        datasets: [{
+            label: 'No of Registrations',
+            data: [1120300,123000,98000,74000,23000],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(255, 206, 86, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(153, 102, 255, 0.7)'
+            ],
+            borderColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 206, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(153, 102, 255)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+var ctxYear = document.getElementById('yearChart').getContext('2d');
+var yearChart = new Chart(ctxYear, {
+    type: 'bar',
+    data: {
+        labels: ['2000-2005', '2006-2010', '2011-2015', '2016-2020', '2021-2025'],
+        datasets: [{
+            label: '# of Registrations (in millions)',
+            data: [28.4, 42.7, 67.2, 89.1, 98.7],
+            backgroundColor: [
+                'rgba(255, 159, 64, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(153, 102, 255, 0.7)',
+                'rgba(201, 203, 207, 0.7)'
+            ],
+            borderColor: [
+                'rgb(255, 159, 64)',
+                'rgb(75, 192, 192)',
+                'rgb(54, 162, 235)',
+                'rgb(153, 102, 255)',
+                'rgb(201, 203, 207)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Number of Registrations (Millions)'
+                }
+            }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'India Vehicle Registration Data (2000-2025)',
+                font: {
+                    size: 16
+                }
+            }
+        }
+    }
+});
+
+var ctxRegional = document.getElementById('regionalChart').getContext('2d');
+var regionalChart = new Chart(ctxRegional, {
+    type: 'bar',
+    data: {
+        labels: ['Maharashtra', 'Delhi', 'Tamil Nadu', 'Karnataka', 'Gujarat', 
+                'Uttar Pradesh', 'West Bengal', 'Telangana', 'Kerala', 'Punjab',
+                'Rajasthan', 'Madhya Pradesh', 'Bihar', 'Odisha', 'Assam'],
+        datasets: [{
+            label: '# of Licenses (in millions)',
+            data: [32.5, 28.9, 25.6, 23.4, 21.3, 19.8, 18.7, 16.5, 14.3, 12.0,
+                  11.9, 10.8, 9.8, 8.7, 7.6],
+            backgroundColor: [
+                'rgba(255, 159, 64, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(153, 102, 255, 0.7)',
+                'rgba(201, 203, 207, 0.7)',
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(255, 205, 86, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(153, 102, 255, 0.7)',
+                'rgba(201, 203, 207, 0.7)',
+                'rgba(255, 159, 64, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(153, 102, 255, 0.7)',
+                'rgba(201, 203, 207, 0.7)'
+            ],
+            borderColor: [
+                'rgb(255, 159, 64)',
+                'rgb(75, 192, 192)',
+                'rgb(54, 162, 235)',
+                'rgb(153, 102, 255)',
+                'rgb(201, 203, 207)',
+                'rgb(255, 99, 132)',
+                'rgb(255, 205, 86)',
+                'rgb(54, 162, 235)',
+                'rgb(153, 102, 255)',
+                'rgb(201, 203, 207)',
+                'rgb(255, 159, 64)',
+                'rgb(75, 192, 192)',
+                'rgb(54, 162, 235)',
+                'rgb(153, 102, 255)',
+                'rgb(201, 203, 207)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Number of Licenses (Millions)'
+                }
+            }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'Regional Distribution of Licenses in India',
+                font: {
+                    size: 16
+                }
+            }
+        }
+    }
+});
+
+var ctxGender = document.getElementById('genderChart').getContext('2d');
+var genderChart = new Chart(ctxGender, {
+    type: 'pie',
+    data: {
+        labels: ['Male', 'Female', 'Others'],
+        datasets: [{
+            label: 'Gender Distribution of License Holders',
+            data: [82.5, 17.2, 0.3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(255, 206, 86, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(153, 102, 255, 0.7)'
+            ],
+            borderColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 206, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(153, 102, 255)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        aspectRatio: 1.5,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Gender Distribution of License Holders in India',
+                font: {
+                    size: 16
+                }
+            },
+            legend: {
+                position: 'bottom',
+                labels: {
+                    padding: 20
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return context.label + ': ' + context.raw + '%';
+                    }
+                }
+            }
+        }
+    }
+});
+        
+        </script>
+        
+        
+
+<footer style="background-color: #f4f4f4;">
+    <div class="footer-top" >
+        <div class="footer-content pt-95 pb-95 md-pt-75 md-pb-27">
+            <div class="container">
+                <div class="row">
+                    <!-- Ayush Startup Portal Section -->
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="resources-widget widget portal">
+                          <div class="tf-logo-s">
+                            <a href="">
+                                <img src="logo.png" alt="" height="60px" width= auto class="logo-image">
+                            </a>
+                        </div>
+                        <div class="visitorDv">
+                            <div class="col-md-12 ft-left text-right">
+                                <div class="Update">
+                                    <p>Last Updated on: 31<sup>st</sup> Aug 2024</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ft-left text-right">
+                                <!-- <div class="Update">
+                                    <p>Visitors: 1221</p>
+                                </div> -->
+                            </div>
+                        </div>                        
+                        </div>
+                    </div>
+
+                    <!-- Links Section -->
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+                        <div class="resources-widget widget links">
+                            <ul class="ft-links">
+                                <li><a href='' title="Website Policies">Website Policies</a></li>
+                                <li><a href='' title="Disclaimer">Disclaimer</a></li>
+                            </ul>
+                            <ul class="ft-links">
+                                <li><a href='' title="Help">Help</a></li>
+                                <li><a href='' title="Terms and Conditions">Terms and Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Section -->
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="resources-widget widget">
+                            <div class="widget-title-wrap mb-21">
+                                <h3 class="widget-title mb-19">Connect with us</h3>
+                            </div>
+                            <ul class="socialgroup-links">
+                                <li class="facebookbg">
+                                    <a target="_blank" href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="twitterbg">
+                                    <a target="_blank" href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="youtubebg">
+                                    <a target="_blank" href="" title="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="instagrambg">
+                                    <a target="_blank" href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        <div class="container1">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="ftb">
+                        <div class="row">
+                            <div class="col-md-12 ft-right">
+                                <div class="copyright-sec text-center">
+                                    <p>Copyright @ 2024 License Lane. | India, All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

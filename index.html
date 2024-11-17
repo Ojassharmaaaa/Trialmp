@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>License Lane</title>
+    <meta name="title" content="Ministry of Ayush Startup Registration">
+    <meta name="description" content="Portal for registering startups related to medical yoga, Ayurveda, and other traditional practices.">
+    <meta name="keywords" content="startup, registration, Ayush, Ayurveda, Yoga, traditional medicine">
+    <meta name="author" content="@yourname">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-website-url.com/">
+    <meta property="og:title" content="Ministry of Ayush Startup Registration">
+    <meta property="og:description" content="Portal for registering startups related to medical yoga, Ayurveda, and other traditional practices.">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-website-url.com/">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <meta property="twitter:title" content="Ministry of Ayush Startup Registration">
+    <meta property="twitter:description" content="Portal for registering startups related to medical yoga, Ayurveda, and other traditional practices.">
+    <link href="images/thumbnail.jpg" rel="apple-touch-icon">
+    <link rel="icon" href="https://i.pinimg.com/736x/3f/95/b6/3f95b6f96e20f2a5ef1d435f38e17c63.jpg" type="image/x-icon">    
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        .hero {
+            display: flex;
+            justify-content: space-between; /* Aligns children horizontally */
+            align-items: center; /* Aligns items vertically in the center */
+            margin: 5% 0;
+            gap: 20px; /* Adds space between the text and the image */
+        }
+
+        .hero-content {
+            width: 50%;
+        }
+
+        .hero-image {
+            width: 0px;
+        }
+
+        .hero-image img {
+          width: 2600px;
+          height: auto; /* Keeps aspect ratio */
+        }
+
+        
+        .floating-chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2986cc;
+            color: #ffffff;
+            padding:  25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .floating-chat-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Fullscreen Modal Styles */
+        .ai-chat-modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 100000000001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+        }
+
+        .ai-chat-modal-content {
+            background-color: #fefefef1;
+            margin: 2% auto;
+            padding: 0;
+            border: 1px solid #a1a1a1;
+            width: 90%;
+            height: 92%;
+            max-width: 700px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .ai-chat-close {
+            color: #ffffff;
+            background-color: #ee2929;
+            padding: 5px 10px;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            align-self: flex-end;
+            margin: 10px;
+        }
+
+        .ai-chat-close:hover,
+        .ai-chat-close:focus {
+            background-color: #cc0000;
+            color: #fff;
+        }
+
+        iframe {
+            flex-grow: 1;
+            width: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal">
+        <button type="button" class="modal-close modal-toggle"><i class="icon" data-feather="x"></i><span class="hide-mobile">ESC</span></button>
+        <div class="modal-content">
+            <div class="success">
+              
+                <h2 class="modal-title first-name" id="title-name"></h2>
+                <p>You're on the list! We'll be in touch.</p>
+                <a href="index.html" class="button">Back home</a>
+            </div>
+            <div class="form-content">
+                <h2 class="modal-title">Join peers in succeeding on road</h2>
+                <p class="modal-subtitle">We're excited to support beginners and novice drivers in their journey towards better road knowledge.</p>
+                <form class='form' name='startupForm' method='POST'><input type='hidden' name='form-name' value='startupForm' />
+                    <div class="group">
+                        <input type="text" id="firstName" name="first-name" placeholder="&nbsp;" autocomplete="off" required>
+                        <label for="first-name">First name</label>
+                        <span class="border"></span>
+                    </div>
+                    <div class="group">
+                        <input type="email" name="email" placeholder="&nbsp;" autocomplete="off" required>
+                        <label for="email">Email</label>
+                        <span class="border"></span>
+                    </div>
+                    <button type="submit" class="button">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content">
+          <!-- Navbar -->
+          <nav class="navbar">
+              <div class="navbar-container">
+                  <!-- Logo -->
+                  <a href="index.html" class="navbar-logo">
+                      <img src="logo.png" alt="logo" />
+                  </a>
+                  
+                  <!-- Navigation Links -->
+                  <ul class="navbar-links">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="categories.html">Categories</a></li>
+                      <li><a href="Analyticspage.html">Dashboard</a></li>
+                      <li><a href="dyk.html">Resources</a></li>
+                      <li><a href="demotest.html">Demo Test</a></li>
+                      <li><a href="help.html">FAQs</a></li>
+                      <li><a href="about.html">About Us</a></li>
+                      
+                  </ul>
+                  
+                  <!-- Sign Up and Login Buttons -->
+                  <div class="navbar-buttons">
+                      <button onclick="window.location.href='registration.html'" class="button">Sign In</button>
+                      <button onclick="window.location.href='login_page.html'" style="margin-left: 20px;" class="button">Login</button>
+                  </div>
+              </div>
+          </nav>
+      
+          <!-- Hero Section -->
+          <div class="hero">
+              <div class="hero-content">
+                  <h1 class="title" style="font-weight: bolder;">Your Go-To Resource for License Essentials</h1>
+                  <h2 class="title shift clip">
+                      <span class="word-shift">
+                          <b class="is-visible">License Requirements&nbsp;</b>
+                          <b>Step-by-Step Guidelines</b>
+                          <b>Necessary Documents</b>
+                          <b>Application FAQs</b>
+                          <b>Driver's License Basics</b>
+                          <b>How to Apply</b>
+                      </span>
+                  </h2>
+                  <button onclick="window.location.href='registration.html'" class="button " >Get Started!</button>
+                  <p class="subtitle">INITIATIVE TO IMPROVE ROAD SAFETY AWARENESS</p>
+              </div>
+              <div class="hero-image" >
+                  <img src="homeimg.jpg" alt="">
+              </div>
+          </div>
+      </div>
+      
+          <div class="screen-wrapper">
+              <img src="frame.jpeg" class="screen" style="border-radius: 120px; padding-top: 45px;" alt="screen"/>
+          </div>
+        <section class="section section-features">
+            <h2 class="title">Guiding You Through the Licensing Process</h2>
+            <div class="features">
+                <img src="images/overlay-left.svg" class="overlay-left hide-mobile" alt="overlay" />
+                <img src="images/overlay-right.svg" class="overlay-right hide-mobile" alt="overlay" />
+                <img src="images/overlay-top.svg" class="overlay-top show-mobile" alt="overlay" />
+                <img src="images/overlay-bottom.svg" class="overlay-bottom show-mobile" alt="overlay" />
+                <div class="row dos">
+                    <div class="feature"><i class="icon" data-feather="check"></i>How to Apply for a License</div>
+                    <div class="feature"><i class="icon" data-feather="check"></i>License Renewal Information</div>
+                    <div class="feature"><i class="icon" data-feather="check"></i>Required Documents Checklist</div>
+                    <div class="feature"><i class="icon" data-feather="check"></i>Eligibility Requirements</div>
+                    <div class="feature"><i class="icon" data-feather="check"></i>Application Process Overview</div>
+                    <div class="feature"><i class="icon" data-feather="check"></i>Frequently Asked Questions</div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="section section-providers">
+        <h2 class="title" style="color: aliceblue; font-size: xxxxxx-large;">Quotes related to Ayurveda</h2>
+            <div class="cards">
+                <img src="images/overlay-left.svg" class="overlay-left hide-mobile" alt="overlay" />
+                <img src="images/overlay-right.svg" class="overlay-right hide-mobile" alt="overlay" />
+                <div class="slider">
+                    <div class="slide"><img src="images/c.png" alt="icloud" /></div>
+                    <div class="slide"><img src="images/c.png" alt="gmail" /></div>
+                    <div class="slide"><img src="images/card-outlook.svg" alt="outlook" /></div>
+                    <div class="slide"><img src="images/card-yahoo.svg" alt="yahooe" /></div>
+                    <div class="slide"><img src="images/card-pop3.svg" alt="pop3" /></div>
+                    <div class="slide"><img src="images/card-imap.svg" alt="imap" /></div>
+                </div>
+            </div>
+        </section> -->
+        <!-- <section class="section imagery">
+            <h2 class="title">Achievements</h2>
+            <img src="images/overlay-bottom.svg" opacity= "60%;" class="overlay-bottom hide-mobile" alt="overlay" />
+            <div class="zero-slider">
+                <div class="slide"><img src="https://ayush.gov.in/assets/img/gallery/eventgallery/gctm2022/b8.JPG" alt="inboxzero" /></div>
+                <div class="slide"><img src="https://ayush.gov.in/assets/img/gallery/eventgallery/ayurvedaday8/WFI/DSC00187.JPG" alt="inboxzero" /></div>
+                <div class="slide"><img src="https://ayush.gov.in/assets/img/gallery/eventgallery/ayurvedaday8/IITF/DSC08762.JPG" alt="inboxzero" /></div>
+                <div class="slide"><img src="https://ayush.gov.in/assets/img/gallery/eventgallery/gctm2022/b8.JPG" alt="inboxzero" /></div>
+                <div class="slide"><img src="https://ayush.gov.in/assets/img/gallery/eventgallery/ayurvedaday8/DSC08560.JPG" alt="inboxzero" /></div>
+                <div class="slide"><img src="https://ayush.gov.in/assets/img/gallery/eventgallery/ayurvedaday8/DSC07400.JPG" alt="inboxzero" /></div>
+            </div>
+        </section> -->
+        
+        <div id="ai-chat-button" class="floating-chat-button">
+            Ask our AI
+        </div>
+    
+        <!-- AI Chat Modal -->
+        <div id="ai-chat-modal" class="ai-chat-modal">
+            <div class="ai-chat-modal-content">
+                <span id="ai-chat-close" class="ai-chat-close">&times;</span>
+                <!-- Embed the Streamlit App using iframe -->
+                <iframe src="http://localhost:8501" title="AI Chat" style="width: 100%; height: 500px; border: none;"></iframe>
+            </div>
+        </div>
+
+        
+        <footer>
+          <div class="footer-top">
+              <div class="footer-content pt-95 pb-95 md-pt-75 md-pb-27">
+                  <div class="container">
+                      <div class="row">
+                          <!-- Ayush Startup Portal Section -->
+                          <div class="col-lg-3 col-md-3 col-sm-12">
+                              <div class="resources-widget widget portal">
+                                <div class="tf-logo-s">
+                                  <a href="">
+                                      <img src="logo.png" alt="" height="60px" width= auto class="logo-image">
+                                  </a>
+                              </div>
+                              <div class="visitorDv">
+                                  <div class="col-md-12 ft-left text-right">
+                                      <div class="Update">
+                                          <p>Last Updated on: 12<sup>th</sup> Nov 2024</p>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12 ft-left text-right">
+                                      <!-- <div class="Update">
+                                          <p>Visitors: 1221</p>
+                                      </div> -->
+                                  </div>
+                              </div>                        
+                              </div>
+                          </div>
+      
+                          <!-- Links Section -->
+                          <div class="col-lg-5 col-md-5 col-sm-12">
+                              <div class="resources-widget widget links">
+                                  <ul class="ft-links">
+                                      <li><a href='' title="Website Policies">Website Policies</a></li>
+                                      <li><a href='' title="Disclaimer">Disclaimer</a></li>
+                                  </ul>
+                                  <ul class="ft-links">
+                                      <li><a href='' title="Help">Help</a></li>
+                                      <li><a href='' title="Terms and Conditions">Terms and Conditions</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+      
+                          <!-- Social Media Section -->
+                          <div class="col-lg-4 col-md-4 col-sm-12">
+                              <div class="resources-widget widget">
+                                  <div class="widget-title-wrap mb-21">
+                                      <h3 class="widget-title mb-19">Connect with us</h3>
+                                  </div>
+                                  <ul class="socialgroup-links">
+                                      <li class="facebookbg">
+                                          <a target="_blank" href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                      </li>
+                                      <li class="twitterbg">
+                                          <a target="_blank" href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                      </li>
+                                      <li class="youtubebg">
+                                          <a target="_blank" href="" title="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                      </li>
+                                      <li class="instagrambg">
+                                          <a target="_blank" href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Footer Bottom Section -->
+          <div class="footer-bottom">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="ftb">
+                              <div class="row">
+                                  <div class="col-md-12 ft-right">
+                                      <div class="copyright-sec text-center">
+                                          <p>Copyright @ 2024 License Lane. | India, All rights reserved.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+      
+      
+    </div>
+
+
+    <script>
+        // Show the chat modal
+        document.getElementById("ai-chat-button").onclick = function () {
+            document.getElementById("ai-chat-modal").style.display = "block";
+        };
+
+        // Close the chat modal
+        document.getElementById("ai-chat-close").onclick = function () {
+            document.getElementById("ai-chat-modal").style.display = "none";
+        };
+
+        // Close the modal if the user clicks outside of it
+        window.onclick = function (event) {
+            if (event.target == document.getElementById("ai-chat-modal")) {
+                document.getElementById("ai-chat-modal").style.display = "none";
+            }
+        };
+    </script>
+
+
+    <script src="./js/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script>
+        // Close modal on escape key
+        $(document).keyup(function (e) {
+            if (e.key === "Escape") {
+                $('.modal').removeClass('modal-show');
+                $('.content').removeClass('content-blurred');
+                $('body').removeClass('no-scroll');
+            }
+        });
+
+        $(function () {
+            // Provider card slider
+            $('.slider').flickity({
+                pauseAutoPlayOnHover: false,
+                prevNextButtons: false,
+                cellAlign: 'center',
+                draggable: false,
+                freeScroll: false,
+                wrapAround: true,
+                pageDots: false,
+                autoPlay: 3000,
+            });
+
+            // Zero slider
+            $('.zero-slider').flickity({
+                pauseAutoPlayOnHover: false,
+                prevNextButtons: false,
+                cellAlign: 'center',
+                freeScroll: false,
+                wrapAround: false,
+                draggable: false,
+                pageDots: false,
+                autoPlay: 3000,
+                fade: true,
+            });
+
+            // Open & close modal
+            $('.modal-toggle').click(function () {
+    // Toggle the modal display
+    $('.modal').toggleClass('modal-show');
+    $('.content').toggleClass('content-blurred');
+    $('body').toggleClass('no-scroll');
+    
+    // Set the path to register.html
+    window.location.href = 'register.html';
+});
+
+            // Reserve username form
+            $(".form").submit(function (e) {
+                e.preventDefault();
+                var $form = $(this);
+                $.post($form.attr("action"), $form.serialize()).then(function () {
+                    $('.form-content').addClass('form-content-hide');
+                    $('.success').addClass('success-show');
+                });
+            });
+
+            // Save user's first name
+            $(".form").submit(function (e) {
+                e.preventDefault();
+                var value = $("#firstName").val();
+                $('.first-name').text("Thank you," + " " + value + "!");
+            });
+
+            // Feather icons
+            feather.replace()
+
+            // ScrollReveal
+            ScrollReveal().reveal(' .hero-image, .title, .screen, .features, .cards, .zero-slider', {
+                distance: '40px',
+                duration: 1000,
+                mobile: false,
+                reset: false,
+                opacity: 0
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

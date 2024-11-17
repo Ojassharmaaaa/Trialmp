@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="https://i.pinimg.com/736x/3f/95/b6/3f95b6f96e20f2a5ef1d435f38e17c63.jpg" type="image/x-icon">
+  <title>License Lane - Sign In</title>
+  <script src="/Default/assets/plugins/jquery/jquery.min.js"></script>
+	<script src="/Default/assets/plugins/bootstrapvalidator/bootstrapValidator.js"></script>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+  <link rel="stylesheet" href="registrationPage/style.css">
+</head>
+<body>
+  <div class="content">
+  <div class="content">
+  <nav class="nav">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="navbar-logo">
+            <img src="logo.png" alt="logo" />
+        </a>
+        
+        <!-- Navigation Links -->
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="Analyticspage.html">Dashboard</a></li>
+            <li><a href="dyk.html">Resources</a></li>
+            <li><a href="demotest.html">Demo Test</a></li>
+            <li><a href="help.html">FAQs</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+        
+        <!-- Register and Login Buttons -->
+         
+        <div class="nav-buttons">
+            <button onclick="window.location.href='login_page.html'" style="margin-left: 20px;" class="button">Login</button>
+        </div>
+    </div>
+</nav>
+</div>  
+  </div>
+
+  <div class="container-fluid" name="start">
+    <div class="row justify-content-center">
+      <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+        <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+
+        
+          <h2 id="heading">Register your Account</h2>
+          <form id="msform" method="post" action="http://localhost/register.php">
+            
+    
+            <fieldset>
+                <div class="form-card personal-details justify-content-left">
+                  <div class="row">
+                    <div class="col-6">
+                      <h2 class="fs-title">Personal Details</h2>
+                    </div>
+                    <div class="col-5">
+                      
+                    </div>
+                  </div>
+                  <div class="row">
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <label class="fieldlabels">First Name: *</label>
+                      <input type="text" name="first_name" placeholder="First Name" required />
+                    </div>
+                    <div class="col-4">
+                      <label class="fieldlabels">Last Name: *</label>
+                      <input type="text" name="last_name" placeholder="Last Name" required />
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-4">
+                      <label class="fieldlabels">Email: *</label>
+                      <input type="email" name="email" placeholder="Email" required />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-5">
+                      <label class="fieldlabels">Mobile Number: *</label>
+                      <input type="text" name="mobile_number" placeholder="Mobile Number" required />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-5">
+                      <label class="fieldlabels">Password: *</label>
+                      <input type="password" name="pwd" placeholder="Password" required />
+                    </div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="col-5">
+                          <label class="fieldlabels">Gender *</label>
+                          <select name="startup_type" placeholder="Gender" required>
+                            <option value="">Gender</option>
+                            <option value="">Male</option>
+                            <option value="">Female</option>
+                            <option value="">Transgender</option>
+                          </select>
+                      </div>  
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                        <label class="fieldlabels1">Select Country: *</label>
+                        <select name="country-names" id="country-names">
+                            <option value="">Select Country</option>
+                            <option value="India">India</option>
+                        </select>
+                    </div>
+                   
+                    <div class="col-3">
+                        <label class="fieldlabels1">Select State: *</label>
+                        <select name="state-names" id="state-names" onchange="updateDistricts()">
+                          <option value="">Select State</option>
+                          <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+                          <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                          <option value="ASSAM">ASSAM</option>
+                          <option value="BIHAR">BIHAR</option>
+                          <option value="CHANDIGARH">CHANDIGARH</option>
+                          <option value="CHHATTISGARH">CHHATTISGARH</option>
+                          <option value="DELHI">DELHI</option>
+                          <option value="GOA">GOA</option>
+                          <option value="GUJARAT">GUJARAT</option>
+                          <option value="HARYANA">HARYANA</option>
+                          <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+                          <option value="JAMMU AND KASHMIR">JAMMU AND KASHMIR</option>
+                          <option value="JHARKHAND">JHARKHAND</option>
+                          <option value="KARNATAKA">KARNATAKA</option>
+                          <option value="KERALA">KERALA</option>
+                          <option value="LADAKH">LADAKH</option>
+                          <option value="LAKSHADWEEP">LAKSHADWEEP</option>
+                          <option value="MADHYA PRADESH">MADHYA PRADESH</option>
+                          <option value="MAHARASHTRA">MAHARASHTRA</option>
+                          <option value="MANIPUR">MANIPUR</option>
+                          <option value="MEGHALAYA">MEGHALAYA</option>
+                          <option value="MIZORAM">MIZORAM</option>
+                          <option value="NAGALAND">NAGALAND</option>
+                          <option value="ODISHA">ODISHA</option>
+                          <option value="PUDUCHERRY">PUDUCHERRY</option>
+                          <option value="PUNJAB">PUNJAB</option>
+                          <option value="RAJASTHAN">RAJASTHAN</option>
+                          <option value="SIKKIM">SIKKIM</option>
+                          <option value="TAMIL NADU">TAMIL NADU</option>
+                          <option value="TELANGANA">TELANGANA</option>
+                          <option value="TRIPURA">TRIPURA</option>
+                          <option value="UTTARAKHAND">UTTARAKHAND</option>
+                          <option value="UTTAR PRADESH">UTTAR PRADESH</option>
+                          <option value="WEST BENGAL">WEST BENGAL</option>
+
+                        </select>
+                      </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <label class="fieldlabels">Address: *</label>
+                          <textarea name="address" id="address" class="form-control address-field" required="required" maxlength="500" data-bv-nonempty-message="Address is required" data-bv-field="address"></textarea>
+
+                        </div>
+                        <div class="col-3">
+                          <label class="fieldlabels">Pincode: *</label>
+                          <input type="text" name="pincode" placeholder="Pincode" maxlength="6" required />
+                        </div>
+                      </div>
+                </div>
+                <input type="submit" name="submit" class="next action-button" style="margin-right: 200px; border-radius: 24px;" value="Submit" />
+                <!-- <input type="button" name="next" class="next action-button" style="margin-right: 200px; border-radius: 24px;" value="Next" /> -->
+              </fieldset>
+         
+  <footer style="background-color: #f4f4f4;">
+    <div class="footer-top" >
+        <div class="footer-content pt-95 pb-95 md-pt-75 md-pb-27">
+            <div class="container">
+                <div class="row">
+                    <!-- Ayush Startup Portal Section -->
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="resources-widget widget portal">
+                          <div class="tf-logo-s">
+                            <a href="">
+                                <img src="logo.png" alt="" height="60px" width= auto class="logo-image">
+                            </a>
+                        </div>
+                        <div class="visitorDv">
+                            <div class="col-md-12 ft-left text-right">
+                                <div class="Update">
+                                    <p>Last Updated on: 12<sup>th</sup> Nov 2024</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ft-left text-right">
+                                <!-- <div class="Update">
+                                    <p>Visitors: 1221</p>
+                                </div> -->
+                            </div>
+                        </div>                        
+                        </div>
+                    </div>
+
+                    <!-- Links Section -->
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+                        <div class="resources-widget widget links">
+                            <ul class="ft-links">
+                                <li><a href='' title="Website Policies">Website Policies</a></li>
+                                <li><a href='' title="Disclaimer">Disclaimer</a></li>
+                            </ul>
+                            <ul class="ft-links">
+                                <li><a href='' title="Help">Help</a></li>
+                                <li><a href='' title="Terms and Conditions">Terms and Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Section -->
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="resources-widget widget">
+                            <div class="widget-title-wrap mb-21">
+                                <h3 class="widget-title mb-19">Connect with us</h3>
+                            </div>
+                            <ul class="socialgroup-links">
+                                <li class="facebookbg">
+                                    <a target="_blank" href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="twitterbg">
+                                    <a target="_blank" href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="youtubebg">
+                                    <a target="_blank" href="" title="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="instagrambg">
+                                    <a target="_blank" href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        <div class="container1">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="ftb">
+                        <div class="row">
+                            <div class="col-md-12 ft-right">
+                                <div class="copyright-sec text-center">
+                                    <p>Copyright @ 2024 License Lane. | India, All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

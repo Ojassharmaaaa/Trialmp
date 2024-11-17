@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel="icon" href="https://i.pinimg.com/736x/3f/95/b6/3f95b6f96e20f2a5ef1d435f38e17c63.jpg" type="image/x-icon">
+ 
+</head>
+<body>
+
+    
+  <div class="content">
+    <div class="content">
+    <nav class="nav">
+      <div class="nav-container">
+          <!-- Logo -->
+          <a href="index.html" class="navbar-logo">
+              <img src="logo.png" alt="logo" />
+          </a>
+          
+          <!-- Navigation Links -->
+          <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="Analyticspage.html">Dashboard</a></li>
+              <li><a href="dyk.html">Resources</a></li>
+              <li><a href="demotest.html">Demo Test</a></li>
+              <li><a href="help.html">FAQs</a></li>
+              <li><a href="about.html">About Us</a></li>
+          </ul>
+          
+          <!-- Register and Login Buttons -->
+           
+          <div class="nav-buttons">
+              <button onclick="window.location.href='registration.html'" style="margin-left: 20px;" class="button">Sign In</button>
+          </div>
+      </div>
+  </nav>
+  </div>  
+    </div>
+  
+
+    <div class="outer_container">
+        <div class="login_container">
+            <form class="login_form" method="post" action="http://localhost/userauth.php">
+                <h2>Login</h2>
+            
+                <!-- Email and Password Fieldset -->
+                <fieldset id="email-login">
+                    <div class="input_group">
+                        <label for="email">Email ID</label>
+                        <!-- Added 'name' attribute -->
+                        <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+                    </div>
+                    <div class="input_group">
+                        <label for="password">Password</label>
+                        <!-- Added 'name' attribute -->
+                        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                    </div>
+                </fieldset>
+            
+                <!-- Changed 'type' from 'button' to 'submit' -->
+                <button type="submit" name="loginb" class="form_button" id="login-button">Log In</button>
+                <div class="extra_links">
+                    <a href="#">Forgot Login Details?</a>
+                    <a href="registration.html">Sign Up</a>
+                </div>
+            </form>
+
+        <!--Footer-->
+        <footer>
+            <div class="footer-top">
+                <div class="footer-content pt-95 pb-95 md-pt-75 md-pb-27">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Ayush Startup Portal Section -->
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <div class="resources-widget widget portal">
+                                  <div class="tf-logo-s">
+                                    <a href="">
+                                        <img src="https://ngo.ayush.gov.in/Default/assets/front/images/archeo-logo.png" alt="Ayush Startup Portal Logo" height="60px" width= auto class="logo-image">
+                                    </a>
+                                </div>
+                                <div class="visitorDv">
+                                    <div class="col-md-12 ft-left text-right">
+                                        <div class="Update">
+                                            <p>Last Updated on: 12<sup>th</sup> Nov 2024</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 ft-left text-right">
+                                        <!-- <div class="Update">
+                                            <p>Visitors: 1221</p>
+                                        </div> -->
+                                    </div>
+                                </div>                        
+                                </div>
+                            </div>
+        
+                            <!-- Links Section -->
+                            <div class="col-lg-5 col-md-5 col-sm-12">
+                                <div class="resources-widget widget links">
+                                    <ul class="ft-links">
+                                        <li><a href='' title="Website Policies">Website Policies</a></li>
+                                        <li><a href='' title="Disclaimer">Disclaimer</a></li>
+                                    </ul>
+                                    <ul class="ft-links">
+                                        <li><a href='' title="Help">Help</a></li>
+                                        <li><a href='' title="Terms and Conditions">Terms and Conditions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+        
+                            <!-- Social Media Section -->
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="resources-widget widget">
+                                    <div class="widget-title-wrap mb-21">
+                                        <h3 class="widget-title mb-19">Connect with us</h3>
+                                    </div>
+                                    <ul class="socialgroup-links">
+                                        <li class="facebookbg">
+                                            <a target="_blank" href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li class="twitterbg">
+                                            <a target="_blank" href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li class="youtubebg">
+                                            <a target="_blank" href="" title="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li class="instagrambg">
+                                            <a target="_blank" href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="ftb">
+                                <div class="row">
+                                    <div class="col-md-12 ft-right">
+                                        <div class="copyright-sec text-center">
+                                            <p>Copyright @ 2024 Ministry of Ayush. | Government of India, All rights reserved.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

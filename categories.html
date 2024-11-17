@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>  
+    <link rel="icon" href="https://i.pinimg.com/736x/3f/95/b6/3f95b6f96e20f2a5ef1d435f38e17c63.jpg" type="image/x-icon">
+    <title>Categories - License Lane</title>
+    <link rel="stylesheet" href="css/schemes.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2%;
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-rows: repeat(3, auto); /* Three rows with automatic height */
+    gap: 20px; /* Space between cards */
+    background-color: #ffffff00;
+}
+
+
+        h1 {
+            text-align: center;
+            color: #1e88e5;
+            margin-bottom: 50px;
+        }
+
+        .scheme-card {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+        .scheme-card:nth-child(odd) {
+            background-color: #bbdefb;
+        }
+
+        .scheme-card:hover {
+            transform: scale(1.02);
+            background-color: #90caf9;
+        }
+
+        .scheme-title {
+            color: #0d47a1;
+            font-size: 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .scheme-content {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .toggle-icon {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+            color: #0d47a1;
+        }
+        .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;  /* Ensures it takes full width of the card */
+        height: 100%;
+}
+
+.image-container img {
+    width: 400px;  /* Set smaller size */
+    height: auto; /* Maintain aspect ratio */
+}
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <div class="content">
+        <nav class="nav">
+          <div class="nav-container">
+              <!-- Logo -->
+              <a href="index.html" class="navbar-logo">
+                  <img src="logo.png" alt="logo" />
+              </a>
+              
+              <!-- Navigation Links -->
+              <ul class="nav">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="categories.html">Categories</a></li>
+                  <li><a href="Analyticspage.html">Dashboard</a></li>
+                  <li><a href="dyk.html">Resources</a></li>
+                  <li><a href="demotest.html">Demo Test</a></li>
+                  <li><a href="help.html">FAQs</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  
+              </ul>
+              
+              <!-- Register and Login Buttons -->
+               
+              <div class="nav-buttons">
+                <button onclick="window.location.href='registration.html'" class="button">Sign In</button>
+                <button onclick="window.location.href='login_page.html'" style="margin-left: 20px;" class="button">Login</button>
+            </div>
+          </div>
+      </nav>
+      </div>  
+        </div>
+        <h1>Driver's License Vehicle Categories</h1>
+    <div class="container">
+        
+
+        <!-- Scheme 1 -->
+        <div class="scheme-card">
+            <div class="scheme-title" onclick="toggleScheme(this)">
+                <div class="image-container">
+                    <img src="pngtree-soft-blue-scooter-png-image_10141839.png" alt="Two-Wheeler No Gear">
+                </div> 
+                <!-- <br></br> -->
+                Category 1: Two-Wheeler (Without Gear)
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="scheme-content">
+                <p><strong>Documents Required:</strong> Age proof, address proof (such as Aadhar card, passport, or utility bill), and Form 1A (medical certificate for applicants over 50 years).</p>
+            <p><strong>Eligibility:</strong> Minimum age of 16 years, with parental consent if under 18.</p>
+            <p><strong>Additional Requirements:</strong> Application fee, recent passport-sized photograph, and a learner's license for practice before the test.</p>
+            <p><strong>Test Type:</strong> Road sign knowledge and basic vehicle handling test conducted by the Regional Transport Office (RTO).</p>
+            </div>
+        </div>
+
+        <!-- Scheme 2 -->
+        <div class="scheme-card">
+            <div class="scheme-title" onclick="toggleScheme(this)">
+                <div class="image-container">
+                    <img src="bike1mp.png" alt="Two-Wheeler with Gear">
+                </div> 
+                Category 2: Two-Wheeler (With Gear)
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="scheme-content">
+                <p><strong>Documents Required:</strong> Age proof, address proof, and medical certificate if required by age or health conditions.</p>
+            <p><strong>Eligibility:</strong> Minimum age of 18 years.</p>
+            <p><strong>Additional Requirements:</strong> Recent passport-sized photograph, learner's license, and application fee.</p>
+            <p><strong>Test Type:</strong> Practical riding test to assess control and road safety knowledge at the RTO.</p>
+            </div>
+        </div>
+
+        <!-- Scheme 3 -->
+        <div class="scheme-card">
+            <div class="scheme-title" onclick="toggleScheme(this)">
+                <div class="image-container">
+                    <img src="lmv1mp.png" alt="LMV">
+                </div> 
+                Category 3: Light Motor Vehicle (LMV - Car)
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="scheme-content">
+                <p><strong>Documents Required:</strong> Proof of age, address, and Form 1A medical certificate if over 50 years.</p>
+            <p><strong>Eligibility:</strong> Minimum age of 18 years.</p>
+            <p><strong>Additional Requirements:</strong> Passport-sized photograph, learner's license, and RTO application fees.</p>
+            <p><strong>Test Type:</strong> Practical driving test assessing skills like parallel parking, reversing, and road awareness.</p>
+            </div>
+        </div>
+
+        <!-- Scheme 4 -->
+        <div class="scheme-card">
+            <div class="scheme-title" onclick="toggleScheme(this)">
+                <div class="image-container">
+                    <img src="lmvcmp.png" alt="Light Motor Vehicle (Commercial)">
+                </div> 
+                Category 4: Light Motor Vehicle (Commercial)
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="scheme-content">
+                <p><strong>Documents Required:</strong> Proof of age, address, and a fitness certificate. Badge or permit may be required for certain states.</p>
+            <p><strong>Eligibility:</strong> Minimum age of 20 years with a valid LMV license for at least one year.</p>
+            <p><strong>Additional Requirements:</strong> Police verification, application fee, and commercial license application form.</p>
+            <p><strong>Test Type:</strong> Practical driving test assessing driving ability, awareness, and knowledge of commercial regulations.</p>
+            </div>
+        </div>
+
+        <!-- Scheme 5 -->
+        <div class="scheme-card">
+            <div class="scheme-title" onclick="toggleScheme(this)">
+                <div class="image-container">
+                    <img src="hmvmp.png" alt="Heavy Motor Vehicle (HMV)">
+                </div> 
+                Category 5: Heavy Motor Vehicle (HMV)
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="scheme-content">
+                <p><strong>Documents Required:</strong> Address and age proof, Form 1A medical certificate, and existing LMV license.</p>
+            <p><strong>Eligibility:</strong> Minimum age of 20 years, with a valid license for LMV or commercial vehicle for at least one year.</p>
+            <p><strong>Additional Requirements:</strong> Recent passport-sized photograph, police verification, and application fees.</p>
+            <p><strong>Test Type:</strong> Practical driving test, including advanced vehicle handling and highway driving skills.</p>
+            </div>
+        </div>
+
+        <!-- Scheme 6 -->
+        <div class="scheme-card">
+            <div class="scheme-title" onclick="toggleScheme(this)">
+                <div class="image-container">
+                    <img src="busmp.png" alt="Transport Vehicles">
+                </div> 
+                Category 6: Transport Vehicles (Passenger and Goods)
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="scheme-content">
+                <p><strong>Documents Required:</strong> Age and address proof, medical certificate, and a fitness certificate.</p>
+            <p><strong>Eligibility:</strong> Minimum age of 20 years and at least one year of LMV experience.</p>
+            <p><strong>Additional Requirements:</strong> Police verification, commercial vehicle application fee, and endorsement for passenger transport.</p>
+            <p><strong>Test Type:</strong> Driving test to assess safety, passenger handling, and highway navigation skills.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle Scheme Content
+        function toggleScheme(element) {
+            var content = element.nextElementSibling;
+            var icon = element.querySelector(".toggle-icon");
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.textContent = "+";
+            } else {
+                content.style.display = "block";
+                icon.textContent = "-";
+            }
+        }
+    </script>
+
+<footer>
+    <div class="footer-top">
+        <div class="footer-content pt-95 pb-95 md-pt-75 md-pb-27">
+            <div class="container">
+                <div class="row">
+                    <!-- Ayush Startup Portal Section -->
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="resources-widget widget portal">
+                          <div class="tf-logo-s">
+                            <a href="">
+                                <img src="logo.png" alt="" height="60px" width= auto class="logo-image">
+                            </a>
+                        </div>
+                        <div class="visitorDv">
+                            <div class="col-md-12 ft-left text-right">
+                                <div class="Update">
+                                    <p>Last Updated on: 12<sup>th</sup> Nov 2024</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ft-left text-right">
+                                <!-- <div class="Update">
+                                    <p>Visitors: 1221</p>
+                                </div> -->
+                            </div>
+                        </div>                        
+                        </div>
+                    </div>
+
+                    <!-- Links Section -->
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+                        <div class="resources-widget widget links">
+                            <ul class="ft-links">
+                                <li><a href='' title="Website Policies">Website Policies</a></li>
+                                <li><a href='' title="Disclaimer">Disclaimer</a></li>
+                            </ul>
+                            <ul class="ft-links">
+                                <li><a href='' title="Help">Help</a></li>
+                                <li><a href='' title="Terms and Conditions">Terms and Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Section -->
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="resources-widget widget">
+                            <div class="widget-title-wrap mb-21">
+                                <h3 class="widget-title mb-19">Connect with us</h3>
+                            </div>
+                            <ul class="socialgroup-links">
+                                <li class="facebookbg">
+                                    <a target="_blank" href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="twitterbg">
+                                    <a target="_blank" href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="youtubebg">
+                                    <a target="_blank" href="" title="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="instagrambg">
+                                    <a target="_blank" href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="ftb">
+                        <div class="row">
+                            <div class="col-md-12 ft-right">
+                                <div class="copyright-sec text-center">
+                                    <p>Copyright @ 2024 License Lane. | India, All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
